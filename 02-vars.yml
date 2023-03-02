@@ -20,7 +20,7 @@
 - name: Task Level variables
   hosts: localhost
   tasks:
-    - name: Print Play Variable from File
+    - name: Print Play Variable
       vars: ## THese vars are only for this task, next task on same play cannot access it
         URL: task.example.com
       ansible.builtin.debug:
@@ -29,7 +29,7 @@
 - name: Vars from Inventory
   hosts: all
   tasks:
-    - name: Print Play Variable from File
+    - name: Print Play Variable from Inventory
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
