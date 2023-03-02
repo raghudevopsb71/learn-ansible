@@ -9,12 +9,20 @@
 
 - name: Play Variables from Files
   hosts: localhost
+  ## vars_files works only on play level
   vars_files:
     - var.yml
   tasks:
-    - name: Print Play Variable from File 
+    - name: Print Play Variable from File
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
-
+- name: Task Level variables
+  hosts: localhost
+  tasks:
+    - name: Print Play Variable from File
+      vars: ## THese vars are only for this task, next task on same play cannot access it 
+        URL: task.example.com
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
 
