@@ -52,3 +52,11 @@
     - name: Print Status
       ansible.builtin.debug:
         msg: "{{ status }}"
+
+- name: Role level variables
+  hosts: localhost
+  roles:
+    - demo
+ 
+
+
