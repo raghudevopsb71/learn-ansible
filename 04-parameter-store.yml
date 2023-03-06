@@ -3,6 +3,6 @@
   tasks:
     - name: Print test1 value
       ansible.builtin.debug:
-        msg: "{{ lookup('amazon.aws.aws_ssm', 'test1') }}"
+        msg: "{{ lookup('amazon.aws.aws_ssm', 'test1', region: 'us-east-1') }}"
 
 
