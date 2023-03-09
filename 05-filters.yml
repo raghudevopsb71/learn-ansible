@@ -5,6 +5,6 @@
   tasks:
     - name: filter
       debug:
-        msg: "{{ URL |  split('/') | last }}"
+        msg: "{{ URL |  split('/') | last | regex_replace('.tar.gz', '')}}"
 
 
