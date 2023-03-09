@@ -5,6 +5,6 @@
   tasks:
     - name: filter
       debug:
-        msg: "{{ URL |  split('/') }}"
+        msg: "{{ URL |  split('/') | last }}"
 
 
