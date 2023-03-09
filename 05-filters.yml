@@ -5,6 +5,6 @@
   tasks:
     - name: filter
       debug:
-        msg: "{{ URL | urlsplit }}"
+        msg: "{{ URL |  split("/") }}"
 
 
