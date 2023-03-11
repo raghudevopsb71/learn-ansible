@@ -4,4 +4,8 @@
     - name: Print Fruit Name
       debug:
         msg: Fruit Name - Apple
-
+      loop:
+        - Apple
+        - Banana
+        - Orange
+ 
